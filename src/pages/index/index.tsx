@@ -1,6 +1,8 @@
 import CommonHeader from '@/components/common/header/CommonHeader'
 import CommonSearchBar from '@/components/common/searchBar/CommonSearchBar'
+import CommonNav from '@/components/common/navigation/CommonNav'
 import styles from './styles/index.module.scss'
+import CommonFooter from '@/components/common/footer/CommonFooter'
 
 function index() {
   return (
@@ -8,6 +10,7 @@ function index() {
       {/* 공통 헤더 UI 부분 */}
       <CommonHeader />
       {/* 공통 네비 UI 부분 */}
+      <CommonNav />
       <div className={styles.page__contents}>
         <div className={styles.page__contents__introBox}>
           <div className={styles.wrapper}>
@@ -20,6 +23,7 @@ function index() {
         <div className={styles.page__contents__imageBox}></div>
       </div>
       {/* 공통 푸터 UI 부분 */}
+      <CommonFooter />
     </div>
   )
 }
