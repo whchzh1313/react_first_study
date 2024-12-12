@@ -1,8 +1,10 @@
 import CommonHeader from '@/components/common/header/CommonHeader'
 import CommonSearchBar from '@/components/common/searchBar/CommonSearchBar'
 import CommonNav from '@/components/common/navigation/CommonNav'
-import styles from './styles/index.module.scss'
 import CommonFooter from '@/components/common/footer/CommonFooter'
+
+// CSS
+import styles from './styles/index.module.scss'
 
 function index() {
   return (
