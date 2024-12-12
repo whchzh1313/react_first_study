@@ -1,4 +1,4 @@
-import styles from './styles/CommonFooter.module.scss'
+import styles from './CommonFooter.module.scss'
 
 function CommonFooter() {
   return (
