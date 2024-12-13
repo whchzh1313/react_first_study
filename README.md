@@ -8,3 +8,10 @@
 5.  React Router 설치: `npm install react-router-dom localforage match-sorter sort-by` <br />
 6.  TypeScript에서 Node.js 모듈을 쓸 수 있는 환경 구축 : `npm i @types/node` <br />
 7.  React Toast Popup 모듈 설치 : `npm install react-simple-toasts` <br />
+
+### 트러블 슈팅
+1. 영상 15강 부분에서 tag.title이 정상적으로 출력이 안됨.
+- map을 사용할 수 없다는 오류 출력.
+- 이런 경우엔 받아온 데이터값이 배열이 아니거나 없을 경우가 있다고 함
+- unsplash api의 response를 확인해 보니 tags가 사라져있음.
+- 강의를 듣더라도 restapi 부분의 DTO는 직접 작성해보기
