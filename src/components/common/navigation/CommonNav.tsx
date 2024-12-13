@@ -23,9 +23,9 @@ const [navigation, setNavigation] = useState<Navigation[]>(navJson)
         )
     })
   return (
-    <div className={styles.navigation}>
+    <nav className={styles.navigation}>
         {navLinks}
-    </div>
+    </nav>
   )
 }
 

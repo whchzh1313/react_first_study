@@ -28,7 +28,6 @@ function index() {
           <Card />
           <Card />
           <Card />
-          <Card />
         </div>
       </div>
       {/* 공통 푸터 UI 부분 */}
