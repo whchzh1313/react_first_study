@@ -1,13 +1,13 @@
+import { useState, useEffect } from 'react'
 import CommonHeader from '@/components/common/header/CommonHeader'
 import CommonSearchBar from '@/components/common/searchBar/CommonSearchBar'
 import CommonNav from '@/components/common/navigation/CommonNav'
 import CommonFooter from '@/components/common/footer/CommonFooter'
 import Card from './components/Card'
-
 // CSS
 import styles from './styles/index.module.scss'
 import axios from 'axios'
-import { useState, useEffect } from 'react'
+import { CardDTO } from './types/Card'
 
 function index() {
   const [imgUrls, setImgUrls] = useState([])
@@ -32,9 +32,9 @@ function index() {
     }
   }
 
-  const cardList = imgUrls.map((card: any) => {
+  const cardList = imgUrls.map((card: CardDTO) => {
     return (
-      <Card data={card} key={card} />
+      <Card data={card} key={card.id} />
     )
   })
 
