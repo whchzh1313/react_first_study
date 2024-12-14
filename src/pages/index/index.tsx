@@ -5,6 +5,7 @@ import CommonHeader from '@/components/common/header/CommonHeader'
 import CommonSearchBar from '@/components/common/searchBar/CommonSearchBar'
 import CommonNav from '@/components/common/navigation/CommonNav'
 import CommonFooter from '@/components/common/footer/CommonFooter'
+import Loading from './components/Loading'
 import DetailDialog from '@/components/common/dialog/DetailDialog'
 import Card from './components/Card'
 // CSS
@@ -26,7 +27,9 @@ function index() {
         })
         return result
     } else {
-      return <div>loading...</div>
+      return (
+        <Loading />
+      )
     }
   }, [imgSelector])
 
