@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import { useRecoilValue, useRecoilValueLoadable } from 'recoil'
+import { useRecoilValueLoadable } from 'recoil'
 import { imageData } from '@/recoil/selectors/imageSelectors'
 import CommonHeader from '@/components/common/header/CommonHeader'
 import CommonSearchBar from '@/components/common/searchBar/CommonSearchBar'

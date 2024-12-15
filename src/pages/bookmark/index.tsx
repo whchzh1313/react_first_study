@@ -4,10 +4,14 @@ import Card from './components/Card'
 
 import styles from './styles/index.module.scss'
 import { CardDTO } from '../index/types/Card'
+import DetailDialog from '@/components/common/dialog/DetailDialog'
 
 // interface Props
 function index() {
     const [data, setData] = useState([])
+    const [imgData, setImgData] = useState<CardDTO>()
+    const [open, setOpen] = useState<boolean>(false) // 이미지 상세 다이얼로그 발생(관리) State
+
     const getData = () => {
         const getLocalStorage = JSON.parse(localStorage.getItem('bookmark'))
 
@@ -31,12 +35,15 @@ function index() {
                     <div className={styles.page__contents__noData}>조회 가능한 데이터가 없습니다.</div>
                 ) : (
                     data.map((item: CardDTO) => {
-                        return <Card prop={item} key={item.id}/>
+                        return <Card prop={item} handleDialog={setOpen} handleSetData={setImgData} key={item.id}/>
                     })
                 )}
             </main>
+            {open && <DetailDialog data={imgData} handleDialog={setOpen} />}
         </div>
     )
+
+    
 }
 
 export default index

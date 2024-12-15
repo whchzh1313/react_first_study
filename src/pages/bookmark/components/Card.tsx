@@ -3,10 +3,17 @@ import styles from './Card.module.scss'
 
 interface Props {
     prop: CardDTO
-}
-function Card({ prop }: Props) {
+    handleDialog: (eventValue: boolean) => void
+    handleSetData: (eventValue: CardDTO) => void
+  }
+
+function Card({ prop, handleDialog, handleSetData }: Props) {
+    const openDialog = () => {
+        handleDialog(true)
+        handleSetData(prop)
+    }
   return (
-    <div className={styles.card}>
+    <div className={styles.card} onClick={openDialog}>
         <div className={styles.card__imageBox}>
             <img src={prop.urls.small} alt={prop.description} className={styles.card__imageBox__image} />{' '}
         </div>
